@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8ea011c27f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Philip</label>
+      <ul>
+        <li>
+          <a class="active" href="#home">Home</a>
+        </li>
+        <li>
+          <a class="" href="#about">About</a>
+        </li>
+        <li>
+          <a class="" href="#project">Projects</a>
+        </li>
+        <li>
+          <a class="" href="#contact">Contact</a>
+        </li>
+        <li>
+          <a class="" href="#blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="home">
+      <div class="home-section">
+        <div>
+          <h1 id="home__Description"></h1>
+          <div><button>My Projects</button></div>
+        </div>
+        <div class="home-card">
+          <div>
+            <img class="card-home" src="angkor.jpg" alt="computer" />
+          </div>
+          <div>
+            <img class="card-home" src="beach.jpg" alt="computer" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-section">
+        <div><img src="about.jpg" alt="noodle" /></div>
+        <div class="about-content">
+          <h1 id="about__Title"></h1>
+          <br />
+          <p id="about__Description"></p>
+        </div>
+      </div>
+    </section>
+    <section id="project">
+      <div>
+        <h1>Project</h1>
+      </div>
+      <div id="project__Cards"></div>
+    </section>
+    <section id="contact">
+      <div>
+        <h1>Contact</h1>
+        <p></p>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
