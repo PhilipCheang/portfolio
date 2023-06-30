@@ -7,7 +7,7 @@ const home = {
 const about = {
   title: 'My Journey',
   description:
-    "In the tapestry of my life, the threads of my dedication as a frontend developer are intricately woven with the profound influence of my unwavering faith in Jesus Christ. Along this journey, love found its way into my heart when I met my wife, whose family's tradition of gathering together for lunch sparked a realization within me. Witnessing their unity and the warmth that emanated from their bond, I understood the transformative power of love and connection. This newfound understanding, combined with my visits to my parent's homeland Cambodia, where I encountered people who shared my features and heritage, ignited a fire within me to be more, to do more. It inspired me to channel my passion for frontend development into meaningful contributions, driven by a deep desire to create digital experiences that foster connection, unity, and a sense of belonging for all who engage with them. With faith as my guide, love as my inspiration, and a commitment to excellence, I am determined to weave a story of impact, touching lives through the power of technology and design.",
+    "As a frontend developer, my dedication is intricately woven with my faith in Jesus Christ. Witnessing the transformative power of love through my wife's family gatherings and connecting with my heritage in Cambodia ignited a passion to create digital experiences that foster unity and belonging. Guided by faith, inspired by love, and committed to excellence, my goal is to make a meaningful impact by using technology and design to touch lives.",
 };
 /* Manipulate DOM elements */
 document.getElementById('home__Description').innerText = home.title;
@@ -25,7 +25,7 @@ const project1 = {
 };
 const project2 = {
   title: 'Dry Cleaner',
-  description: 'Dry cleaner wanting to add a pick up and delivery',
+  description: 'Dry cleaner added Pickup & Delivery',
   github: 'https://github.com/PhilipCheang/Ecommerce-Front',
   live: 'https://ecommerce-front-six-lac.vercel.app',
   image: '/Jacqui.png',
@@ -40,27 +40,62 @@ const project3 = {
 
 const projects = [project1, project2, project3];
 
-function createProjectCards(projects) {
+const createProjectCards = function (projects) {
   const projectSection = document.getElementById('project__Cards');
 
-  projects.forEach(project => {
+  projects.forEach(function (project) {
     const card = `
-    <div class="project-card">
-      <div class="card-wrapper">
-      <img src="${project.image}" alt="${project.title}" class="card-image">
-        <div class="card-content">
-          <h2 class="card-title">${project.title}</h2>
-          <p class="card-description">${project.description}</p>
+    <div class="project__card">
+      <div class="card__wrapper">
+        <img class="card__image" src="${project.image}" alt="${project.title}">
+        <div class="card__content">
+          <h2 class="card__title">${project.title}</h2>
+          <p class="card__description">${project.description}</p>
         </div>
-        <div class="card-links">
-          <a href="${project.github}" target="_blank" class="card-link">GitHub</a>
-          <a href="${project.live}" target="_blank" class="card-link">Live Demo</a>
+        <div class="card__links">
+          <a href="${project.github}" target="_blank" class="card__link">GitHub</a>
+          <a href="${project.live}" target="_blank" class="card__link">Demo</a>
         </div>
       </div>
     </div>
   `;
-
     projectSection.insertAdjacentHTML('beforeend', card);
   });
-}
+};
 createProjectCards(projects);
+
+/* Modal Contact */
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnsOpenModal = document.querySelector('.show-modal');
+const hidden = document.querySelector('.hidden');
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+  window.scrollTo(0, 0);
+};
+
+btnsOpenModal.addEventListener('click', openModal);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && modal.classList.contains('hidden')) {
+    openModal();
+  }
+});
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+btnCloseModal.addEventListener('click', closeModal);
+
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});

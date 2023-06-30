@@ -4,6 +4,8 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  /* align content vertically */
+  /* align-content: center;  */
 }
 
 body {
@@ -12,13 +14,18 @@ body {
 }
 
 button {
-  background: linear-gradient(45deg, #5700ef 0%, #5800f0 50%, #5702e5 100%);
+  background: #5700ef;
   border-radius: 15px;
   cursor: pointer;
   color: white;
   font-size: 1.9rem;
+  opacity: 0.6;
+  transition: 0.3s;
   margin: 13px 10px;
   padding: 7px;
+}
+button:hover {
+  opacity: 1;
 }
 
 h1 {
@@ -132,19 +139,6 @@ section {
   padding-top: 90px;
 }
 
-.card-home {
-  padding: 13px;
-  border-radius: 50%;
-  width: 40px;
-}
-
-.home-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 40px;
-  width: 100%;
-  justify-content: center;
-}
 .home-section {
   background: #131315;
   border-radius: 25px;
@@ -153,6 +147,25 @@ section {
   justify-content: center;
   text-align: center;
   height: 100vh;
+}
+
+.home-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 40px;
+  justify-content: center;
+  padding: 3px;
+  width: 100%;
+}
+
+.image-angkor {
+  border-radius: 75%;
+  padding-right: 3px;
+}
+
+.image-beach {
+  border-radius: 50%;
+  padding-left: 3px;
 }
 
 .home-section h1 {
@@ -168,11 +181,12 @@ section {
 .about-section {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
 }
 
 .about-section img {
   border-radius: 15px;
-  height: 90vh;
+  height: 50vh;
   width: 100%;
 }
 
@@ -185,50 +199,156 @@ section {
   opacity: 95%;
 }
 #about__Title {
-  font-size: 3.2rem;
+  padding: 20px 0px;
+  font-size: 1.5rem;
+  color: #d8d2ce;
+  text-transform: uppercase;
 }
 
 #about__Description {
   font-size: 1.5rem;
 }
 
-/* CSS */
+.project-title {
+  padding: 20px 0px;
+  font-size: 1.5rem;
+  color: #d8d2ce;
+  text-transform: uppercase;
+}
+/* Project Layout */
 
 #project__Cards {
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
 }
+
 /* project section background */
-.project-card {
+.project__card {
   display: flex;
   height: 60vh;
   width: 100%;
   align-items: center;
 }
 
-.card-wrapper {
+.card__wrapper {
   height: 100%;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  /* border-radius: 15%; */
+}
+/* map over index to create separate classes*/
+.card__image {
+  border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 60%;
   width: 100%;
-  border-radius: 15%;
 }
 
-.project-card img {
-  width: 80%;
-  height: 80%;
-  border-top-left-radius: 13%;
-  border-top-right-radius: 13%;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
-}
-
-.card-content {
+.card__content {
   background: #fff;
-  width: 80%;
+  width: 100%;
 }
-.card-title {
+.card__title {
   color: #000;
+  font-size: 1.5rem;
+  padding: 5px 5px 5px 0px;
 }
 
-.card-description {
+.card__description {
   color: #000;
+  font-size: 1.1rem;
+  padding: 5px 5px 40px 0px;
+}
+
+.card__link {
+  background: #000;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 3px;
+  margin-right: 10px;
+}
+
+form {
+  width: 100%;
+}
+
+.collab {
+  background: #131315;
+  border-radius: 25px 25px 0 0;
+  color: #fff;
+  display: block;
+  height: 100vh;
+  justify-content: center;
+  padding-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+.contact__container {
+  width: 100%;
+  padding: 50px 200px;
+}
+.contact__title {
+  font-size: 6.5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Modal Contact */
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 25px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }

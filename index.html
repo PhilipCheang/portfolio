@@ -43,19 +43,21 @@
         </div>
         <div class="home-card">
           <div>
-            <img class="card-home" src="angkor.jpg" alt="computer" />
+            <img class="image-angkor" src="angkor.jpg" alt="computer" />
           </div>
           <div>
-            <img class="card-home" src="beach.jpg" alt="computer" />
+            <img class="image-beach" src="beach.jpg" alt="computer" />
           </div>
         </div>
       </div>
     </section>
     <section id="about">
       <div class="about-section">
-        <div><img src="about.jpg" alt="noodle" /></div>
-        <div class="about-content">
+        <div>
           <h1 id="about__Title"></h1>
+          <img src="about.jpg" alt="noodle" />
+        </div>
+        <div class="about-content">
           <br />
           <p id="about__Description"></p>
         </div>
@@ -63,15 +65,40 @@
     </section>
     <section id="project">
       <div>
-        <h1>Project</h1>
+        <h1 class="project-title">Past Clients</h1>
       </div>
       <div id="project__Cards"></div>
     </section>
     <section id="contact">
-      <div>
-        <h1>Contact</h1>
-        <p></p>
+      <div class="collab">
+        <div class="contact__container">
+          <h1 class="contact__title">Have a Cool Project?</h1>
+          <button type="sumbit" class="show-modal" name="submit" value="Submit">
+            Contact Me
+          </button>
+        </div>
       </div>
+      <div class="modal hidden">
+        <h1>Let's Collaborate!</h1>
+        <button class="close-modal">&times;</button>
+        <form action="" id="contactForm">
+          <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" />
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" id="email" />
+            </li>
+            <li>
+              <label for="msg">Message:</label>
+              <textarea id="msg" name="user_message"></textarea>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
     </section>
     <script src="script.js"></script>
   </body>
