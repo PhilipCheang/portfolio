@@ -99,3 +99,10 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+const navbarContact = document.querySelector('#navbarContact');
+
+navbarContact.addEventListener('click', function (e) {
+  e.preventDefault();
+  openModal();
+});
