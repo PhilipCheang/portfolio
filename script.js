@@ -53,8 +53,8 @@ const createProjectCards = function (projects) {
           <p class="card__description">${project.description}</p>
         </div>
         <div class="card__links">
-          <a href="${project.github}" target="_blank" class="card__link">GitHub</a>
-          <a href="${project.live}" target="_blank" class="card__link">Demo</a>
+          <a href="${project.github}" target="_blank" class="github__link">GitHub</a>
+          <a href="${project.live}" target="_blank" class="live__link">Demo</a>
         </div>
       </div>
     </div>
@@ -99,10 +99,22 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+// const navbarContact = document.querySelector('#navbar__Contact');
 
-const navbarContact = document.querySelector('#navbarContact');
+// navbarContact.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   openModal();
+// });
 
-navbarContact.addEventListener('click', function (e) {
+/* Open new Window to Blog Link */
+const navbarBlog = document.querySelector('#navbar__Blog');
+
+const openBlog = function () {
+  const blogLink = 'https://dailyj.cyclic.app/';
+  window.open(blogLink, '_blank');
+};
+
+navbarBlog.addEventListener('click', function (e) {
   e.preventDefault();
-  openModal();
+  openBlog();
 });

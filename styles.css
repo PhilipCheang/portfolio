@@ -43,7 +43,7 @@ nav {
 }
 
 label.logo {
-  color: #000;
+  color: #5700ef;
   font-size: 35px;
   line-height: 80px;
   /* padding: 0 100px; */
@@ -71,7 +71,8 @@ nav ul li a {
 
 a.active,
 a:hover {
-  background: rgba(162, 160, 160, 0.862);
+  color: #5700ef;
+  text-decoration: underline;
   transition: 0.5s;
 }
 
@@ -110,7 +111,7 @@ a:hover {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #fff;
+    background: #131315;
     top: 80px;
     left: -100%; /* menu disappears */
     text-align: center;
@@ -123,11 +124,12 @@ a:hover {
   }
   nav ul li a {
     font-size: 20px;
+    color: #fff;
   }
   a:hover,
   a.active {
     background: none;
-    color: #0082e6;
+    color: #5700ef;
   }
   #check:checked ~ ul {
     left: 0;
@@ -264,8 +266,10 @@ section {
   padding: 5px 5px 40px 0px;
 }
 
-.card__link {
-  background: #000;
+.github__link,
+.live__link {
+  background: #5700ef;
+  border: solid 1px #000;
   border-radius: 12px;
   color: #fff;
   font-size: 1.5rem;
@@ -284,7 +288,7 @@ form {
   display: block;
   height: 100vh;
   justify-content: center;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   text-align: center;
   width: 100%;
 }
@@ -301,6 +305,18 @@ form {
   justify-items: center;
 }
 
+hr {
+  color: darkgray;
+  opacity: 0.4;
+  margin: 20px;
+  width: 100%;
+}
+
+.contact-image {
+  border-radius: 50%;
+  height: 22%;
+  width: 20%;
+}
 /* Modal Contact */
 
 .show-modal {
@@ -366,4 +382,43 @@ input {
 form textarea {
   height: 10rem;
   width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  label.logo {
+    padding-left: 25px;
+  }
+  .fa-bars {
+    padding-right: 25px;
+  }
+  #home__Description {
+    font-size: 3.1rem;
+  }
+  .about-section {
+    display: block;
+  }
+  .about-content {
+    align-content: left;
+    padding-left: 0;
+  }
+  #project__Cards {
+    display: block;
+  }
+  .project__card {
+    margin-bottom: 25px;
+  }
+  .card__wrapper {
+    width: 100%;
+  }
+  .contact__container {
+    padding: 10px 0;
+  }
+  .contact__title {
+    font-size: 3.1rem;
+  }
+  #contact button {
+    height: 60px;
+    width: 140px;
+    font-size: 1.1rem;
+  }
 }
