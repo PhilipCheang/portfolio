@@ -277,10 +277,6 @@ section {
   margin-right: 10px;
 }
 
-form {
-  width: 100%;
-}
-
 .collab {
   background: #131315;
   border-radius: 25px 25px 0 0;
@@ -296,13 +292,17 @@ form {
   width: 100%;
   padding: 50px 200px;
 }
-.contact__title,
-.modal-title {
+.contact__title {
   font-size: 6.5rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   justify-items: center;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  width: 70%;
 }
 
 hr {
@@ -318,7 +318,7 @@ hr {
   width: 20%;
 }
 /* Modal Contact */
-
+/* Contact Me Button */
 .show-modal {
   font-size: 2rem;
   font-weight: 600;
@@ -333,7 +333,7 @@ hr {
   position: absolute;
   top: 1.2rem;
   right: 2rem;
-  font-size: 5rem;
+  font-size: 2rem;
   color: #333;
   cursor: pointer;
   border: none;
@@ -349,11 +349,11 @@ hr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 93%;
-  height: 70%;
+  width: 30%;
+  height: 50%;
 
   background-color: white;
-  padding: 6rem;
+  padding: 0.5rem;
   border-radius: 25px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -369,30 +369,48 @@ hr {
   backdrop-filter: blur(3px);
   z-index: 5;
 }
+#contactForm {
+  height: 100px;
+  background: #fff;
+}
 
 #name,
-#email {
+#email,
+#msg {
+  display: block;
   margin: 5px 0 5px 19px;
 }
 input {
-  width: 60%;
+  width: 90%;
   height: 40%;
 }
 
 form textarea {
   height: 10rem;
-  width: 60%;
+  width: 90%;
+}
+.btn-form {
+  font-size: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   label.logo {
     padding-left: 25px;
   }
   .fa-bars {
     padding-right: 25px;
   }
+  .home-card {
+    display: column;
+    grid-template-columns: 1fr;
+    height: 40px;
+    justify-content: center;
+    padding: 3px;
+    width: 100%;
+  }
   #home__Description {
-    font-size: 3.1rem;
+    font-size: 2.1rem;
+    padding: 1px 1px;
   }
   .about-section {
     display: block;
@@ -410,6 +428,9 @@ form textarea {
   .card__wrapper {
     width: 100%;
   }
+  .collab {
+    height: 60vh;
+  }
   .contact__container {
     padding: 10px 0;
   }
@@ -420,5 +441,89 @@ form textarea {
     height: 60px;
     width: 140px;
     font-size: 1.1rem;
+  }
+  .show-modal {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .modal-title {
+    font-size: 1.4rem;
+  }
+  .close-modal {
+    padding: 0;
+    font-size: 0.5rem;
+  }
+  .modal {
+    /* ... */
+    width: 50%;
+    padding: 0;
+
+    /* Add this property to enable scrolling within the modal */
+  }
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  #name,
+  #email {
+    margin: 0;
+  }
+  input {
+    width: 100%;
+    height: 40%;
+  }
+
+  form textarea {
+    height: 10rem;
+    width: 100%;
+  }
+  .btn-form {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  label.logo {
+    padding-left: 25px;
+  }
+  .fa-bars {
+    padding-right: 25px;
+  }
+  .about-content {
+    padding-left: 40px;
+  }
+  #project__Cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .project__card {
+    margin-bottom: 25px;
+  }
+  .contact__title {
+    font-size: 3.2rem;
+  }
+  .collab {
+    height: 90vh;
+  }
+  .modal-title {
+    font-size: 1.4rem;
+  }
+  .modal {
+    width: 50%;
+    padding: 0;
+  }
+  .show-modal {
+    font-size: 1.2rem;
+    height: 45px;
+    padding: 5px;
+  }
+  .close-modal {
+    padding: 0;
+    font-size: 2rem;
   }
 }
