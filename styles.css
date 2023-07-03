@@ -41,7 +41,7 @@ nav {
   background-color: #fff;
   height: 80px;
   width: 100%;
-  padding: 0 50px;
+  padding: 0 50px 0 25px;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -53,6 +53,8 @@ label.logo {
   line-height: 80px;
   /* padding: 0 100px; */
   font-weight: bold;
+  padding: 0;
+  margin-left: 25px;
 }
 
 nav ul {
@@ -405,12 +407,13 @@ form textarea {
 }
 
 @media screen and (max-width: 665px) {
+  nav {
+    padding: 0 50px 0 25px;
+  }
   label.logo {
-    padding-left: 25px;
+    padding-left: 0;
   }
-  .fa-bars {
-    padding-right: 25px;
-  }
+
   .home-card {
     display: column;
     grid-template-columns: 1fr;
@@ -505,11 +508,17 @@ form textarea {
 }
 
 @media screen and (min-width: 666px) and (max-width: 991px) {
-  label.logo {
+  /* label.logo {
     padding-left: 25px;
   }
   .fa-bars {
     padding-right: 25px;
+  } */
+  nav {
+    padding: 0 50px 0 25px;
+  }
+  #navbar__Blog {
+    padding-right: 0;
   }
   .home-section {
     height: 80vh;
@@ -534,8 +543,11 @@ form textarea {
     display: flex;
     grid-template-columns: 1fr 1fr;
   }
+  .project-title {
+    padding-bottom: 25px;
+  }
   .project__card {
-    margin: 5px;
+    margin: 35px 5px 5px 0;
   }
   .card__wrapper {
     height: 340px;
