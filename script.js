@@ -31,7 +31,7 @@ const project2 = {
   image: '/Jacqui.png',
 };
 const project3 = {
-  title: 'Dry Cleaner Admin Page',
+  title: 'Admin Page',
   description: 'Track Live Orders and Edit/Update Services',
   github: 'https://github.com/PhilipCheang/ecom-admin',
   live: 'https://ecom-admin-plum.vercel.app/',

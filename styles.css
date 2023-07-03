@@ -13,16 +13,21 @@ body {
   background-color: #fff;
 }
 
+section {
+  margin: 0px 50px 0px 50px;
+  padding-top: 80px;
+}
+
 button {
   background: #5700ef;
   border-radius: 15px;
   cursor: pointer;
   color: white;
-  font-size: 1.9rem;
+  font-size: 2rem;
   opacity: 0.6;
   transition: 0.3s;
   margin: 13px 10px;
-  padding: 7px;
+  padding: 2px;
 }
 button:hover {
   opacity: 1;
@@ -58,13 +63,13 @@ nav ul {
 nav ul li {
   display: inline-block; /* display left to right */
   line-height: 80px; /* height of box */
-  margin: 0 5px;
+  margin-left: 15px;
 }
 /* change text color link to white */
 nav ul li a {
   color: #000;
   font-size: 17px;
-  padding: 7px 13px;
+  padding: 7px 0px 7px 5px;
   border-radius: 3px;
   text-transform: uppercase;
 }
@@ -100,6 +105,7 @@ a:hover {
   }
   nav ul li a {
     font-size: 16px;
+    padding-right: 25px;
   }
 }
 @media (max-width: 858px) {
@@ -119,7 +125,7 @@ a:hover {
   }
   nav ul li {
     display: block;
-    margin: 50px 0;
+    margin: 25px 0;
     line-height: 30px;
   }
   nav ul li a {
@@ -134,11 +140,6 @@ a:hover {
   #check:checked ~ ul {
     left: 0;
   }
-}
-
-section {
-  margin: 0px 50px 0px 50px;
-  padding-top: 90px;
 }
 
 .home-section {
@@ -301,8 +302,9 @@ section {
 }
 
 .modal-title {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   width: 70%;
+  padding-left: 18px;
 }
 
 hr {
@@ -350,10 +352,10 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30%;
-  height: 50%;
+  height: 60%;
 
   background-color: white;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   border-radius: 25px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -380,6 +382,9 @@ hr {
   display: block;
   margin: 5px 0 5px 19px;
 }
+label {
+  padding-left: 18px;
+}
 input {
   width: 90%;
   height: 40%;
@@ -391,9 +396,15 @@ form textarea {
 }
 .btn-form {
   font-size: 1.5rem;
+  margin-left: 18px;
 }
 
-@media screen and (max-width: 767px) {
+#secret {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 665px) {
   label.logo {
     padding-left: 25px;
   }
@@ -403,13 +414,18 @@ form textarea {
   .home-card {
     display: column;
     grid-template-columns: 1fr;
-    height: 40px;
     justify-content: center;
     padding: 3px;
     width: 100%;
   }
+  button {
+    font-size: 1rem;
+  }
+  .image-angkor {
+    height: 50%;
+  }
   #home__Description {
-    font-size: 2.1rem;
+    font-size: 1.2rem;
     padding: 1px 1px;
   }
   .about-section {
@@ -431,11 +447,15 @@ form textarea {
   .collab {
     height: 60vh;
   }
+  #secret {
+    margin: 0;
+    padding: 0;
+  }
   .contact__container {
     padding: 10px 0;
   }
   .contact__title {
-    font-size: 3.1rem;
+    font-size: 2.1rem;
   }
   #contact button {
     height: 60px;
@@ -448,72 +468,109 @@ form textarea {
   }
   .modal-title {
     font-size: 1.4rem;
+    padding: 5px;
   }
   .close-modal {
-    padding: 0;
-    font-size: 0.5rem;
+    padding-bottom: 15px;
+    font-size: 2rem;
   }
   .modal {
-    /* ... */
-    width: 50%;
+    height: 63%;
+    width: 90%;
     padding: 0;
-
-    /* Add this property to enable scrolling within the modal */
-  }
-  form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 0;
-    height: 200px;
-    overflow: hidden;
   }
 
   #name,
-  #email {
-    margin: 0;
+  #email,
+  #msg {
+    margin: 5px;
+    padding: 0;
   }
   input {
-    width: 100%;
+    width: 90%;
     height: 40%;
+  }
+  label {
+    padding: 5px;
   }
 
   form textarea {
     height: 10rem;
-    width: 100%;
+    width: 85%;
   }
   .btn-form {
     font-size: 1rem;
+    margin-left: 5px;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 991px) {
+@media screen and (min-width: 666px) and (max-width: 991px) {
   label.logo {
     padding-left: 25px;
   }
   .fa-bars {
     padding-right: 25px;
   }
+  .home-section {
+    height: 80vh;
+  }
+  #home__Description {
+    font-size: 1.9rem;
+    padding: 0;
+  }
+  .about-section img {
+    border-radius: 15px;
+    height: 50vh;
+    width: 100%;
+  }
   .about-content {
     padding-left: 40px;
   }
+  #about__Description {
+    font-size: 1.1rem;
+  }
+
   #project__Cards {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
   }
   .project__card {
-    margin-bottom: 25px;
+    margin: 5px;
+  }
+  .card__wrapper {
+    height: 340px;
+    width: 99%;
+  }
+  .card__image {
+    height: 50%;
+  }
+  .card__links {
+    height: 30px;
+  }
+  .contact__container {
+    width: 100%;
+    padding: 25px 100px;
   }
   .contact__title {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
   }
   .collab {
-    height: 90vh;
+    height: 100vh;
+  }
+  #secret {
+    margin: 0;
+    padding: 0;
   }
   .modal-title {
+    padding-top: 10px;
     font-size: 1.4rem;
   }
   .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 24.2rem;
     width: 50%;
     padding: 0;
   }
@@ -523,7 +580,14 @@ form textarea {
     padding: 5px;
   }
   .close-modal {
-    padding: 0;
+    padding-bottom: 15px;
     font-size: 2rem;
+  }
+  input {
+    width: 90%;
+    height: 20%;
+  }
+  form textarea {
+    height: 7rem;
   }
 }
