@@ -64,7 +64,7 @@ const project3 = {
   image: '/admin.png',
 };
 
-const projects = [project1, project2, project3];
+const projects = [project1, project2];
 
 const createProjectCards = function (projects) {
   const projectSection = document.getElementById('project__Cards');
@@ -144,3 +144,58 @@ navbarBlog.addEventListener('click', function (e) {
   e.preventDefault();
   openBlog();
 });
+
+// /* Contact Form */
+
+// document
+//   .getElementById('contactForm')
+//   .addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevent form submission
+
+//     // Get form values
+//     var name = document.getElementById('name').value;
+//     var email = document.getElementById('email').value;
+//     var message = document.getElementById('msg').value;
+
+//     // Perform form validation (optional)
+//     if (!name || !email || !message) {
+//       alert('Please fill in all fields');
+//       return;
+//     }
+
+//     // Send the form data to the server (replace with your own implementation)
+//     sendFormData(name, email, message);
+
+//     // Reset the form after submission
+//     document.getElementById('contactForm').reset();
+//   });
+
+// function sendFormData(name, email, message) {
+//   var formData = {
+//     name: name,
+//     email: email,
+//     message: message,
+//   };
+
+//   fetch('/your-server-endpoint', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(formData),
+//   })
+//     .then(function (response) {
+//       if (response.ok) {
+//         // Success message or further processing
+//         alert('Form submitted successfully');
+//       } else {
+//         // Error handling
+//         alert('Form submission failed');
+//       }
+//     })
+//     .catch(function (error) {
+//       // Error handling
+//       alert('An error occurred');
+//       console.log(error);
+//     });
+// }
