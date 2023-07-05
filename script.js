@@ -1,5 +1,31 @@
 'use strict';
 
+// Wait for the document to load
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all the mobile navbar links
+  var navbarLinks = document.querySelectorAll('.navbar ul li a');
+
+  // Attach a click event listener to each link
+  navbarLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      // Prevent the default link behavior
+      event.preventDefault();
+
+      // Close the mobile menu
+      var checkbox = document.getElementById('check');
+      checkbox.checked = false;
+
+      // Get the target section ID from the link's href attribute
+      var targetSectionId = link.getAttribute('href');
+
+      // Scroll to the target section smoothly
+      document.querySelector(targetSectionId).scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
+});
+
 /* Content */
 const home = {
   title: 'Frontend Developer',
