@@ -63,8 +63,15 @@ const project3 = {
   live: 'https://ecom-admin-plum.vercel.app/',
   image: '/admin.png',
 };
+const project4 = {
+  title: 'Bankist',
+  description: 'Bank app login user: pc pin: 1111',
+  github: 'https://github.com/PhilipCheang/bankist',
+  live: 'https://bankist-eight.vercel.app/',
+  image: '/bankist.jpg',
+};
 
-const projects = [project1, project2];
+const projects = [project1, project2, project4];
 
 const createProjectCards = function (projects) {
   const projectSection = document.getElementById('project__Cards');
