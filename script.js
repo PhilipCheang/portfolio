@@ -103,7 +103,7 @@ createProjectCards(projects);
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal = document.querySelector('.show-modal');
+const btnsOpenModal = document.querySelectorAll('.show-modal');
 const hidden = document.querySelector('.hidden');
 
 const openModal = function (e) {
@@ -113,7 +113,8 @@ const openModal = function (e) {
   // window.scrollTo(0, 0);
 };
 
-btnsOpenModal.addEventListener('click', openModal);
+for (let i = 0; i < btnsOpenModal.length; i++)
+  btnsOpenModal[i].addEventListener('click', openModal);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Enter' && modal.classList.contains('hidden')) {
