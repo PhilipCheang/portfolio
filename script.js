@@ -104,10 +104,11 @@ const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelector('.show-modal');
 const hidden = document.querySelector('.hidden');
 
-const openModal = function () {
+const openModal = function (e) {
+  e.preventDefault();
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 };
 
 btnsOpenModal.addEventListener('click', openModal);
