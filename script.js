@@ -1,5 +1,7 @@
 'use strict';
 
+gsap.from('nav', { duration: 1, y: '-100%', ease: 'bounce' });
+gsap.from('li', { duration: 1, opacity: 0, delay: 1, stagger: 0.5 });
 // Wait for the document to load
 document.addEventListener('DOMContentLoaded', function () {
   // Get all the mobile navbar links
