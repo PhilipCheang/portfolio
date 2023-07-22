@@ -72,8 +72,16 @@ const project4 = {
   live: 'https://bankist-eight.vercel.app/',
   image: '/bankist.jpg',
 };
+const project5 = {
+  title: 'Mapty',
+  description:
+    'fitness app to log your running or cyclying onto a local storage',
+  github: 'https://github.com/PhilipCheang/Fitness',
+  live: 'https://fitness-gules.vercel.app/',
+  image: '/fitness.jpg',
+};
 
-const projects = [project1, project2, project4];
+const projects = [project1, project2, project4, project5];
 
 const createProjectCards = function (projects) {
   const projectSection = document.getElementById('project__Cards');
@@ -113,8 +121,7 @@ const openModal = function (e) {
   // window.scrollTo(0, 0);
 };
 
-for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener('click', openModal);
+btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Enter' && modal.classList.contains('hidden')) {
