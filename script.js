@@ -80,8 +80,15 @@ const project5 = {
   live: 'https://fitness-gules.vercel.app/',
   image: '/fitness.jpg',
 };
+const project6 = {
+  title: 'NeighborQuest',
+  description: 'Fetch rest countries api',
+  github: 'https://github.com/PhilipCheang/neighborquest',
+  live: 'https://neighborquest.vercel.app/',
+  image: '/neighborquest.jpg',
+};
 
-const projects = [project1, project2, project4, project5];
+const projects = [project1, project2, project4, project5, project6];
 
 const createProjectCards = function (projects) {
   const projectSection = document.getElementById('project__Cards');
