@@ -73,12 +73,11 @@ const project4 = {
   image: '/bankist.jpg',
 };
 const project5 = {
-  title: 'Mapty',
-  description:
-    'fitness app to log your running or cyclying onto a local storage',
-  github: 'https://github.com/PhilipCheang/Fitness',
-  live: 'https://fitness-gules.vercel.app/',
-  image: '/fitness.jpg',
+  title: 'FishOn',
+  description: 'Click on map to log your fishing trip onto a local storage',
+  github: 'https://github.com/PhilipCheang/FishOn',
+  live: 'https://fish-on.vercel.app/',
+  image: '/fishon.jpg',
 };
 const project6 = {
   title: 'NeighborQuest',
