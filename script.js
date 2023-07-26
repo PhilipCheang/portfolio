@@ -45,39 +45,39 @@ document.getElementById('about__Description').innerText = about.description;
 /* Project */
 
 const project1 = {
-  title: 'Donut',
-  description: 'Landing page for a local donut shop',
-  github: 'https://github.com/PhilipCheang/donutshop',
-  live: 'https://donutshop-alpha.vercel.app/',
-  image: '/donut.png',
-};
-const project2 = {
   title: 'Dry Cleaner',
   description: 'Dry cleaner added Pickup & Delivery',
   github: 'https://github.com/PhilipCheang/Ecommerce-Front',
   live: 'https://ecommerce-front-six-lac.vercel.app',
   image: '/Jacqui.png',
 };
+const project2 = {
+  title: 'FishOn',
+  description: 'Click on map to log your fishing trip onto a local storage',
+  github: 'https://github.com/PhilipCheang/FishOn',
+  live: 'https://fish-on.vercel.app/',
+  image: '/fishon.jpg',
+};
 const project3 = {
+  title: 'Donut',
+  description: 'Landing page for a local donut shop',
+  github: 'https://github.com/PhilipCheang/donutshop',
+  live: 'https://donutshop-alpha.vercel.app/',
+  image: '/donut.png',
+};
+const project4 = {
   title: 'Admin Page',
   description: 'Track Live Orders and Edit/Update Services',
   github: 'https://github.com/PhilipCheang/ecom-admin',
   live: 'https://ecom-admin-plum.vercel.app/',
   image: '/admin.png',
 };
-const project4 = {
+const project5 = {
   title: 'Bankist',
   description: 'Bank app login user: pc pin: 1111',
   github: 'https://github.com/PhilipCheang/bankist',
   live: 'https://bankist-eight.vercel.app/',
   image: '/bankist.jpg',
-};
-const project5 = {
-  title: 'FishOn',
-  description: 'Click on map to log your fishing trip onto a local storage',
-  github: 'https://github.com/PhilipCheang/FishOn',
-  live: 'https://fish-on.vercel.app/',
-  image: '/fishon.jpg',
 };
 const project6 = {
   title: 'NeighborQuest',
@@ -87,7 +87,7 @@ const project6 = {
   image: '/neighborquest.jpg',
 };
 
-const projects = [project1, project2, project4, project5, project6];
+const projects = [project1, project2, project3, project5, project6];
 
 const createProjectCards = function (projects) {
   const projectSection = document.getElementById('project__Cards');
