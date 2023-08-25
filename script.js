@@ -45,41 +45,48 @@ document.getElementById('about__Description').innerText = about.description;
 /* Project */
 
 const project1 = {
-  title: 'Dry Cleaner',
-  description: 'Dry cleaner added Pickup & Delivery',
+  title: 'Delivery App',
+  description: 'Dry cleaner Delivery App',
+  github: 'https://github.com/PhilipCheang/Delivery',
+  live: 'https://delivery-ivory.vercel.app/',
+  image: '/delivery.jpg',
+};
+const project2 = {
+  title: 'Ecommerce App',
+  description: 'Dry cleaner Ecommerce',
   github: 'https://github.com/PhilipCheang/Ecommerce-Front',
   live: 'https://ecommerce-front-six-lac.vercel.app',
   image: '/Jacqui.png',
 };
-const project2 = {
-  title: 'FishOn',
+const project3 = {
+  title: 'Fish Log',
   description: 'Click on map to log your fishing trip onto a local storage',
   github: 'https://github.com/PhilipCheang/FishOn',
   live: 'https://fish-on.vercel.app/',
   image: '/fishon.jpg',
 };
-const project3 = {
+const project4 = {
   title: 'Donut',
   description: 'Landing page for a local donut shop',
   github: 'https://github.com/PhilipCheang/donutshop',
   live: 'https://donutshop-alpha.vercel.app/',
   image: '/donut.png',
 };
-const project4 = {
+const project5 = {
   title: 'Admin Page',
   description: 'Track Live Orders and Edit/Update Services',
   github: 'https://github.com/PhilipCheang/ecom-admin',
   live: 'https://ecom-admin-plum.vercel.app/',
   image: '/admin.png',
 };
-const project5 = {
+const project6 = {
   title: 'Bankist',
   description: 'Bank app login user: pc pin: 1111',
   github: 'https://github.com/PhilipCheang/bankist',
   live: 'https://bankist-eight.vercel.app/',
   image: '/bankist.jpg',
 };
-const project6 = {
+const project7 = {
   title: 'NeighborQuest',
   description: 'Fetch rest countries api',
   github: 'https://github.com/PhilipCheang/neighborquest',
@@ -87,7 +94,7 @@ const project6 = {
   image: '/neighborquest.jpg',
 };
 
-const projects = [project1, project2, project3, project5, project6];
+const projects = [project1, project2, project3, project5, project6, project7];
 
 const createProjectCards = function (projects) {
   const projectSection = document.getElementById('project__Cards');
